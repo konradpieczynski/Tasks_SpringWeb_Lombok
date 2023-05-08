@@ -1,0 +1,13 @@
+version: '3.9'
+services:
+  tomcat:
+    image: tomcat:9.0
+    ports:
+      - '8090:8080'
+    volumes:
+     - ./config/context.xml:/tmp/context.xml
+     - ./config/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml
+     - ./build/libs/tasks-0.0.1-SNAPSHOT.war:/usr/local/tomcat/webapps/crud.war
+    command: bash -c "cp -avT /usr/local/tomcat/webapps.dist/manager /usr/local/tomcat/webapps/manager; cp -v /tmp/context.xml /usr/local/tomcat/webapps/manager/META-INF/context.xml; catalina.sh run"
+
+ 
