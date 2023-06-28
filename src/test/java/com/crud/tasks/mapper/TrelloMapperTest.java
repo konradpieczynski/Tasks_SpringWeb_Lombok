@@ -1,4 +1,4 @@
-package com.crud.tasks.trello.mapper;
+package com.crud.tasks.mapper;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +33,9 @@ public class TrelloMapperTest {
         trelloBoard = trelloMapper.mapToBoards(trelloBoardDto);
         //THEN
         assertEquals(2, trelloBoard.size());
-        assertEquals("board2", trelloBoard.get(1).getName());                
+        assertEquals("2", trelloBoard.get(1).getId());
+        assertEquals("board2", trelloBoard.get(1).getName());
+        assertEquals(1, trelloBoard.get(1).getLists().size());
     }
 
     @Test
@@ -51,7 +53,9 @@ public class TrelloMapperTest {
         trelloBoardDto = trelloMapper.mapToBoardsDto(trelloBoard);
         //THEN
         assertEquals(2, trelloBoardDto.size());
+        assertEquals("2", trelloBoardDto.get(1).getId());
         assertEquals("board2", trelloBoardDto.get(1).getName());
+        assertEquals(1, trelloBoardDto.get(1).getLists().size());
     }
 
     @Test
@@ -66,6 +70,7 @@ public class TrelloMapperTest {
         //THEN
         assertEquals(2, trelloList.size());
         assertEquals("list2", trelloList.get(1).getName());
+        assertFalse(trelloList.get(1).isClosed());
     }
 
     @Test
@@ -80,6 +85,7 @@ public class TrelloMapperTest {
         //THEN
         assertEquals(2, trelloListDto.size());
         assertEquals("list2", trelloListDto.get(1).getName());
+        assertFalse(trelloListDto.get(1).isClosed());
     }
 
     @Test
