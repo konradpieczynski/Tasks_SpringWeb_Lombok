@@ -35,7 +35,7 @@ public class TrelloMapperTest {
         trelloBoard = trelloMapper.mapToBoards(trelloBoardDto);
         //THEN
         assertEquals(2, trelloBoard.size());
-        assertEquals("board2", trelloBoard.get(1));                
+        assertEquals("board2", trelloBoard.get(1).getName());                
     }
 
     @Test
