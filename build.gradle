@@ -28,12 +28,13 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springdoc:springdoc-openapi-ui:1.7.0'
 	implementation 'org.springframework.boot:spring-boot-starter-mail'
+	testImplementation 'com.h2database:h2:2.1.214'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'com.google.code.gson:gson'
 	compileOnly 'org.projectlombok:lombok'
 	runtimeOnly 'com.mysql:mysql-connector-j'
-	testImplementation 'com.h2database:h2:2.1.214'
-	annotationProcessor 'org.projectlombok:lombok'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+	annotationProcessor 'org.projectlombok:lombok'
 }
 
 tasks.named('test') {

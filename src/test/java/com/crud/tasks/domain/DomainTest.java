@@ -1,13 +1,7 @@
 package com.crud.tasks.domain;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import com.crud.tasks.domain.*;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-
+import com.crud.tasks.domain.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 public class DomainTest {  
@@ -29,7 +23,7 @@ public class DomainTest {
         createdTrelloCardDto.setShortUrl("url");
         createdTrelloCardDto.setBadges(badges);
         //THEN
-        assertEquals(1, createdTrelloCardDto.getId());
+        assertEquals("1", createdTrelloCardDto.getId());
         assertEquals("name", createdTrelloCardDto.getName());
         assertEquals("url", createdTrelloCardDto.getShortUrl());
         assertEquals(badges, createdTrelloCardDto.getBadges());
