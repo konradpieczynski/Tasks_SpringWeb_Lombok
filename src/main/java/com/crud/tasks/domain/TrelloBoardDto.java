@@ -9,10 +9,8 @@ import lombok.Setter;
 
 import java.util.List;
 
-@Setter
 @Getter
 @AllArgsConstructor
-@NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class TrelloBoardDto {
 

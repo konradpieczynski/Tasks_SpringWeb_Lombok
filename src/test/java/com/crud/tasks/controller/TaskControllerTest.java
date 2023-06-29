@@ -81,7 +81,8 @@ public class TaskControllerTest {
         .andExpect(MockMvcResultMatchers.jsonPath("$.title", Matchers.is("title1")))
         .andExpect(MockMvcResultMatchers.jsonPath("$.content", Matchers.is("content1")));
     }
-    
+
+    @Test
     void shouldDeleteTask() throws Exception {
     //Given
     //When & Then
