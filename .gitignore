@@ -1,7 +1,10 @@
 HELP.md
 .gradle
 build/
+<<<<<<< HEAD
 gradle/
+=======
+>>>>>>> 4dad36a (gitignore)
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
